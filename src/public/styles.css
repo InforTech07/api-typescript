@@ -1,0 +1,15 @@
+html{
+    padding: auto;
+    margin: 0;
+}
+
+.container-app{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+h2{
+    text-align: center;
+}

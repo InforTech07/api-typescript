@@ -1,0 +1,16 @@
+###new task
+POST http://localhost:8080/task
+Content-Type: application/json
+
+{
+    "id":2,
+    "name":"task 2",
+    "description":"my second task",
+    "status":false
+}
+
+### Get all tasks
+GET http://localhost:8080/task
+
+### Get one task
+GET http://localhost:8080/task/3

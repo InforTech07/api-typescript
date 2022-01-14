@@ -1,8 +1,14 @@
 import { Serve } from "./serve";
+import {config} from "./default";
 
-function main(n:string,p:string |number ){
-    const srv = new Serve(n,p);
+/**
+ * init application
+ * @param n name app
+ * @param p port app
+ */
+function main(h: string,p:string |number,n:string ){
+    const srv = new Serve(h,p,n);
     srv.initServer();
 }
 
-main("infortech",3000)
+main(config.api.host,config.api.port,config.api.nameApp)
