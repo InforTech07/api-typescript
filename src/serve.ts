@@ -1,5 +1,6 @@
 import express,{ Application} from "express";
 import taskRouter from "./routes/index.routes";
+import cors from "cors";
 import path from "path";
 
 export class Serve{
@@ -20,7 +21,7 @@ export class Serve{
         this._api.use(express.json())
         this._api.use(express.urlencoded({extended:true}))
         this._api.use(express.static(path.join(__dirname,'public')))
-       // this._api.use(cors())
+        this._api.use(cors())
        // this._api.use(morgan("dev"))
     }
 

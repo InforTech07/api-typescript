@@ -7,6 +7,7 @@ const taskModel = new TaskModel();
 
 export const getAllTask=(req:Request,res:Response)=>{
     let tasks = taskModel.all();
+    console.log(req.ip)
     resSuccess(req,res,tasks,http.OK)
 }
 
